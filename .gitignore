@@ -127,3 +127,26 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Ignore Terraform state files
+*.tfstate*
+
+# Ignore the .terraform directory
+.terraform/
+
+# Ignore Python cache directories
+__pycache__/
+*.pyc
+
+# Ignore Flask temporary files
+instance/
+.webassets-cache/
+
+# Ignore other generated files
+*.log
+
+# Ignore .env files
+.env
+
+

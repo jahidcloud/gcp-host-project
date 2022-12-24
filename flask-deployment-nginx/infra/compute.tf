@@ -17,10 +17,12 @@ resource "google_compute_instance" "app" {
     # Install Docker
     curl -fsSL https://get.docker.com -o get-docker.sh
     sh get-docker.sh
+    apt-get install -y docker-compose
 
     # Install Git
     apt-get update
     apt-get install -y git
+    git clone https://github.com/jahidcloud/gcp-host-project.git
   EOF
 
   network_interface {
