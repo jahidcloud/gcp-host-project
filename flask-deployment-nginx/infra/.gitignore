@@ -3,6 +3,7 @@
 
 # Ignore the .terraform directory
 .terraform/
+.terraform.lock.hcl
 
 # Ignore Python cache directories
 __pycache__/
