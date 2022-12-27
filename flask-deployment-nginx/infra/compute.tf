@@ -17,7 +17,7 @@ resource "google_compute_instance" "app" {
   tags = ["ssh-access", "flask-instance"]
 
   ### Points to a seperate bash script using tf data resource to render upon install###
-  metadata_startup_script = data.template_file.install_userdata.rendered
+  metadata_startup_script = data.template_file.userdata.rendered
 
   ###Specifiying which vpc and subnet to deploy the GCE to #### 
   network_interface {
@@ -32,7 +32,3 @@ resource "google_compute_instance" "app" {
   }
 }
 
-### Configuring tf data resource to point to render bash script ###
-data "template_file" "install_userdata" {
-  template = file("./templates/userdata.sh")
-}
